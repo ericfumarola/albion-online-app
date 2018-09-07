@@ -1,8 +1,13 @@
-import Header from "../comps/Header";
+import Head from "next/head";
+import NavBar from "../comps/NavBar";
 
 export default () => (
     <div>
-        <Header/>
-        <p>This is the about page</p>
+        <Head>
+            <title>AlbionOnline App</title>
+            <link href="../static/index.css" rel="stylesheet" />
+        </Head>
+        <NavBar value={1}/>
+        <p>About</p>
     </div>
 )
