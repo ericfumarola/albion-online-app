@@ -2,11 +2,35 @@ import React from 'react';
 import NavBar from "../../comps/NavBar";
 //import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+//import Grid from '@material-ui/core/Grid';
 import {ITEM_CATEGORIES} from "../../static/consts/itemscats"
 //import Loading from "./loading";
 //import Card from "./card";
 import Card from "../../comps/Card"
+import styled from "styled-components";
+
+const Grid = styled.div`
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+    //align-items: center;
+   height: 100%;
+  
+  
+  flex-direction: row;
+  align-items: stretch;
+  
+
+  padding:5px; /* this */
+   
+   & > div {
+   
+     flex-grow: 1;
+     flex-basis: 200px;
+    text-align:center;
+    margin:10px;  /* and that, will result in a 10px gap */
+   }
+`;
 
 const styles = theme => ({
     root: {
@@ -60,17 +84,15 @@ class CategoriesGrid extends React.Component {
             return (
                 <div className={classes.root}>
                     <NavBar/>
-                    <Grid container spacing={24}>
-                        <Grid item xs>
-                            {this.state.items.map(item => (
-                                <Card
-                                    key={`${item.name}`}
-                                    img={`${item.img}`}
-                                    title={`${item.name}`}
-                                    description={`${item.description}`}
-                                ></Card>
-                            ))}
-                        </Grid>
+                    <Grid>
+                        {this.state.items.map(item => (
+                            <Card
+                                key={`${item.name}`}
+                                img={`${item.img}`}
+                                title={`${item.name}`}
+                                description={`${item.description}`}
+                            ></Card>
+                        ))}
                     </Grid>
                 </div>)
         }

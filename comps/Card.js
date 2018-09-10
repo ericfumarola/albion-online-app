@@ -11,12 +11,14 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
     card: {
-        maxWidth: 300,
+        // maxWidth: 300,
+        // height: 300
     },
     media: {
         // ⚠️ object-fit is not supported by IE11.
-        objectFit: 'cover',
-    },
+        //objectFit: 'cover'
+        width: 220
+    }
 };
 
 function ImgMediaCard(props) {
@@ -25,13 +27,12 @@ function ImgMediaCard(props) {
         <Card className={classes.card}>
             <CardActionArea>
                 <CardMedia
-                    height="140"
                     component="img"
                     className={classes.media}
                     image={props.img}
                     title={props.title}
                 />
-                <CardContent>
+                <CardContent style={{padding: 12}}>
                     <Typography gutterBottom variant="headline" component="h2">
                         {props.title}
                     </Typography>
@@ -40,15 +41,6 @@ function ImgMediaCard(props) {
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            {/*<CardActions>
-                <Button size="small" color="primary">
-                    Share
-                </Button>
-                <Button size="small" color="primary">
-                    Learn More
-                </Button>
-            </CardActions>
-            */}
         </Card>
     );
 }
