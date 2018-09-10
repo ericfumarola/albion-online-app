@@ -1,61 +1,53 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from "next/link";
+import styled from 'styled-components';
+import Head from "next/head";
 
-//import CategoriesGrid from './categoriesgrid'
+const Section = styled.span`
+   font-size: 1.5em;
+   padding-left: 1.5em;
+   padding-right: 1.5em;
+   cursor: pointer;
+   
+   &:hover {
+    background-color: red;
+    color: white;
+   }
+`;
 
-function TabContainer(props) {
-    return (
-        <Typography component="div" style={{padding: 8 * 3}}>
-            {props.children}
-        </Typography>
-    );
-}
-
-TabContainer.propTypes = {
-    children: PropTypes.node.isRequired,
-};
-
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-    },
-});
-
-class SimpleTabs extends React.Component {
+class NavBar extends React.Component {
     state = {
         value: 0,
     };
 
-    handleChange = (event, value) => {
-        this.setState({value});
-    };
+    // handleChange = (event, value) => {
+    //     this.setState({value});
+    // };
 
     componentDidMount() {
-        this.setState({value: this.props.value});
+        //this.setState({value: this.props.value});
     }
 
     render() {
-        const {classes} = this.props;
-        const {value} = this.state;
-        console.log('navbar value:', this.props.value);
+        //console.log('navbar value:', this.props.value);
 
         return (
+
             <div>
-
-
-                    <Link href="/"><span>Home</span></Link>
-                    <Link href="/about"><span>About</span></Link>
-
-
+                <Head>
+                    <title>AlbionOnline App</title>
+                    <link href="../static/index.css" rel="stylesheet"/>
+                </Head>
+                <Link href="/"><Section>Home</Section></Link>
+                <Link href="/items"><Section>Items</Section></Link>
+                <Link href="/about"><Section>About</Section></Link>
             </div>
         );
     }
 }
 
-SimpleTabs.propTypes = {
-    classes: PropTypes.object.isRequired,
+NavBar.propTypes = {
+    //classes: PropTypes.object.isRequired,
 };
 
-export default SimpleTabs;
+export default NavBar;
