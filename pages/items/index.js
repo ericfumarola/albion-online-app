@@ -1,12 +1,8 @@
 import React from 'react';
 import NavBar from "../../comps/NavBar";
-//import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-//import Grid from '@material-ui/core/Grid';
 import {ITEM_CATEGORIES} from "../../static/consts/itemscats"
-//import Loading from "./loading";
-//import Card from "./card";
-import Card from "../../comps/Card"
+import Card from "../../comps/Card";
 import styled from "styled-components";
 
 const Grid = styled.div`
@@ -87,7 +83,8 @@ class CategoriesGrid extends React.Component {
                     <Grid>
                         {this.state.items.map(item => (
                             <Card
-                                key={`${item.name}`}
+                                key={`${item.id}`}
+                                id={`${item.id}`}
                                 img={`${item.img}`}
                                 title={`${item.name}`}
                                 description={`${item.description}`}

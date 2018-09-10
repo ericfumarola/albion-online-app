@@ -15,7 +15,7 @@ export const ITEM_CATEGORIES = [
     },
     {
         name: 'Farmeables',
-        id: 'farmableitem',
+        id: 'farmeableitem',
         description: 'Food seeds, plants, etc',
         img: `${ITEM_IMG}T3_FARM_WHEAT_SEED`
     },
