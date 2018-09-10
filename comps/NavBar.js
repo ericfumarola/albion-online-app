@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-//import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import AppBar from 'material-ui/AppBar'
 import Link from "next/link";
+
 //import CategoriesGrid from './categoriesgrid'
 
 function TabContainer(props) {
@@ -47,13 +42,13 @@ class SimpleTabs extends React.Component {
         console.log('navbar value:', this.props.value);
 
         return (
-            <div className={classes.root}>
-                <AppBar position="static">
-                    <Tabs value={value} onChange={this.handleChange}>
-                        <Link href="/"><Tab label="Home"/></Link>
-                        <Link href="/about"><Tab label="About"/></Link>
-                    </Tabs>
-                </AppBar>
+            <div>
+
+
+                    <Link href="/"><span>Home</span></Link>
+                    <Link href="/about"><span>About</span></Link>
+
+
             </div>
         );
     }
@@ -63,4 +58,4 @@ SimpleTabs.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleTabs);
+export default SimpleTabs;
