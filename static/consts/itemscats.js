@@ -14,8 +14,8 @@ export const ITEM_CATEGORIES = [
         img: `${ITEM_IMG}T4_OFF_TOWERSHIELD_UNDEAD`
     },
     {
-        name: 'Farmeables',
-        id: 'farmeableitem',
+        name: 'Farmables',
+        id: 'farmableitem',
         description: 'Food seeds, plants, etc',
         img: `${ITEM_IMG}T3_FARM_WHEAT_SEED`
     },
