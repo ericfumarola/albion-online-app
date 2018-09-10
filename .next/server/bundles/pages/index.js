@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -80,16 +80,12 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__ = __webpack_require__("@material-ui/core/styles");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_styles__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_AppBar__ = __webpack_require__("@material-ui/core/AppBar");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_AppBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_AppBar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Tabs__ = __webpack_require__("@material-ui/core/Tabs");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Tabs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Tabs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Tab__ = __webpack_require__("@material-ui/core/Tab");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Tab___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Tab__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Typography__ = __webpack_require__("@material-ui/core/Typography");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Typography___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Typography__);
+throw new Error("Cannot find module \"@material-ui/core/styles\"");
+throw new Error("Cannot find module \"@material-ui/core/Tabs\"");
+throw new Error("Cannot find module \"@material-ui/core/Tab\"");
+throw new Error("Cannot find module \"@material-ui/core/Typography\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_AppBar__ = __webpack_require__("material-ui/AppBar");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_AppBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_AppBar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_next_link__ = __webpack_require__("next/link");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_next_link__);
 var _jsxFileName = "/Users/ericfumarola/Documents/GitHub/albion-online-app/comps/NavBar.js";
@@ -110,6 +106,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 
 
+ //import AppBar from '@material-ui/core/AppBar';
 
 
 
@@ -118,14 +115,14 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
  //import CategoriesGrid from './categoriesgrid'
 
 function TabContainer(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Typography___default.a, {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Typography___default.a, {
     component: "div",
     style: {
       padding: 8 * 3
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     }
   }, props.children);
 }
@@ -195,44 +192,44 @@ function (_React$Component) {
         className: classes.root,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 50
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_AppBar___default.a, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_AppBar___default.a, {
         position: "static",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Tabs___default.a, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Tabs___default.a, {
         value: value,
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 52
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_next_link___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 53
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Tab___default.a, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Tab___default.a, {
         label: "Home",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 53
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_next_link___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Tab___default.a, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Tab___default.a, {
         label: "About",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         }
       })))));
     }
@@ -304,7 +301,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./pages/index.js");
@@ -312,38 +309,10 @@ module.exports = __webpack_require__("./pages/index.js");
 
 /***/ }),
 
-/***/ "@material-ui/core/AppBar":
+/***/ "material-ui/AppBar":
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/AppBar");
-
-/***/ }),
-
-/***/ "@material-ui/core/Tab":
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Tab");
-
-/***/ }),
-
-/***/ "@material-ui/core/Tabs":
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Tabs");
-
-/***/ }),
-
-/***/ "@material-ui/core/Typography":
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Typography");
-
-/***/ }),
-
-/***/ "@material-ui/core/styles":
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/styles");
+module.exports = require("material-ui/AppBar");
 
 /***/ }),
 
