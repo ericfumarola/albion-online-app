@@ -7,6 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "back": "node Server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +16,9 @@
   "dependencies": {
     "@material-ui/core": "^3.0.3",
     "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "fastify": "^1.11.2",
     "mdbreact": "^4.7.1",
     "next": "^6.1.2",
     "node-fetch": "^2.2.0",

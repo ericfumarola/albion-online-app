@@ -6,6 +6,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import cors from 'cors';
 
 const styles = theme => ({
     root: {
@@ -17,12 +18,32 @@ const styles = theme => ({
     },
 });
 
+const getItemData = itemId => {
+    let options = {
+        method: 'GET',
+        headers: {
+            'Access-Control-Allow-Origin':'*'
+        }
+    };
+    let query = `http://localhost:5000/item/${itemId}`;
+
+    fetch(query, options)
+        .then((response) => {
+            return response.json()
+        })
+        .then((recurso) => {
+            console.log(recurso)
+        });
+
+   return '';
+};
+
 function SimpleExpansionPanel(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
             <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} onClick={() => getItemData(props.itemId)}>
                     <Typography className={classes.heading}>{props.itemTitle}</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>

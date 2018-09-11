@@ -37,11 +37,11 @@ export const REPO = 'https://raw.githubusercontent.com/broderickhyman/ao-bin-dum
 export const ITEMS = REPO+'items.xml';
 export const ITEM_IMG = 'https://gameinfo.albiononline.com/api/gameinfo/items/';
 
-export const getItemData = (id) => {
+/*export const getItemData = (id) => {
     fetch(`gameinfo.albiononline.com/api/gameinfo/items/${id}/data`)
         .then(response=>response.json())
         .then(console.log(response))
         //.then(data=>console.log('data',data));
 
     //return data;
-};
+};*/

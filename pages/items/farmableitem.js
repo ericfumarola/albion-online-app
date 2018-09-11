@@ -33,6 +33,7 @@ class ItemsList extends React.Component {
 
                 parser.parseString(body, function (err, result) {
                     itemsList = result;
+                    console.log('itemList', result)
                     //console.log('itemsList complete (itemsList.items)', itemsList.items);
 
                     /*itemsList.map(item=>{
@@ -77,10 +78,11 @@ class ItemsList extends React.Component {
                     {this.state.items.map(item => {
                             let id = item.uniquename;
                             //console.log(getItemData(id))
-                            //console.log('item', item)
+                            console.log('item', item)
                             return(
                                 <SimpleExpansionPanel
                                     key={`${id}`}
+                                    itemId={`${id}`}
                                     itemTitle={`${id}`}
                                     itemDescription={`Description${id}`}
                                 ></SimpleExpansionPanel>
