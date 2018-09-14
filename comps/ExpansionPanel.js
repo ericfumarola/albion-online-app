@@ -34,8 +34,8 @@ class SimpleExpansionPanel extends React.Component {
         console.log('itemData', itemData)
         return (
             <div className={classes.root}>
-                <ExpansionPanel>
-                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>} onClick={() => this.getItemData(itemId)}>
+                <ExpansionPanel onChange={(ev,exp) => exp && this.getItemData(itemId)}>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
                         <Typography className={classes.heading}>{itemTitle}</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>

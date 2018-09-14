@@ -60,10 +60,16 @@ class ItemsList extends React.Component {
                     itemsList = itemsList.items.farmableitem;
                     itemsList = itemsList.map((item, index) => itemsList[index].$);
 
+                    itemsList = itemsList.filter(function(item, index){
+                        console.log('item', item);
+                        return (item, index) => itemsList[index].$
+                    });
+
                     currentComponent.setState({
                         items: itemsList,
                         loading: false
                     });
+                    console.log('itemList', currentComponent.state.items)
                 });
             });
     }
@@ -78,7 +84,7 @@ class ItemsList extends React.Component {
                     {this.state.items.map(item => {
                             let id = item.uniquename;
                             //console.log(getItemData(id))
-                            console.log('item', item)
+                            //console.log('item', item)
                             return(
                                 <SimpleExpansionPanel
                                     key={`${id}`}
