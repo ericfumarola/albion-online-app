@@ -1,8 +1,9 @@
-import Header from "../comps/Header";
+import Head from "next/head";
+import NavBar from "../comps/NavBar";
 
 export default () => (
     <div>
-        <Header/>
-        <p>This is the about page</p>
+        <NavBar/>
+        <p>About</p>
     </div>
 )
